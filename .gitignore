@@ -49,8 +49,8 @@ rsconnect/
 _progress/
 
 # Lecture and exercise files
-/lectures
-/documentation
+**/lectures
+**/documentation
 python_commands.md
 **/exercises*
 
@@ -69,3 +69,5 @@ python_commands.md
 *.xpt
 *.db
 *.xlsx
+*.geojson
+*.zip
