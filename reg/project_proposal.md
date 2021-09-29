@@ -3,6 +3,7 @@
 ### Question/Need:
 
 * What is the question behind your analysis? What is the purpose of the model/system you plan to build?
+
 Sony Music wants to build a predictor to identify the possible popularity of a song, so that they can identify hit songs
 ahead of time and market them accordingly. This task is becoming more difficult given that music tastes have become more
 global, thanks to the internet and streaming platforms like Spotify and Pandora. Now, label executives have to identify 
@@ -14,6 +15,7 @@ Sony would like to first build a predictor for the United States market and, if 
 to build the same for other countries.
 
 * Who benefits from exploring this question or building this model/system?
+
 Currently, record labels have executives that listen to songs to identify potential hits. By using a predictor, we could first
 predict the popularity score of a certain track before human executives listen to it. This will reduce the number of tracks for 
 execs to listen to, making it easier overall to find the next hit song.
@@ -21,6 +23,7 @@ execs to listen to, making it easier overall to find the next hit song.
 ### Data Description:
 
 * What dataset(s) do you plan to use, and how will you obtain the data?
+
 I will be using two datasets, obtained as following:
 - Spotify US top 200 songs by week for the year 2020, scraped from [spotifycharts.com](https://spotifycharts.com/regional/us/daily/2020-09-01) using BeautifulSoup and Selenium
 - Spotify track features for all the songs in the first dataset, obtained from the [Spotify Developer Tracks API](https://developer.spotify.com/documentation/web-api/reference/#category-tracks)
@@ -51,6 +54,7 @@ I will begin with all these features in my first model, and refine by removing c
 non-significant features as I go along.
 
 * If modeling, what will you predict as your target?
+
 The target is the popularity of a track, calculated by a Spotify algorithm based on total number
 of plays the track has had and how recent those plays are. 
 
@@ -64,6 +68,7 @@ Given that we are using a list of top songs from 2020 (last year), this may not 
 ### Tools:
 
 * How do you intend to meet the tools requirement of the project?
+
 I will use the following tools in the project:
 - BeautifulSoup and Selenium for scraping spotifycharts.com
 - pandas to summarize and clean the data
@@ -75,4 +80,5 @@ I will use the following tools in the project:
 ### MVP Goal:
 
 * What would a minimum viable product (MVP) look like for this project?
+
 I will work on an MVP using 10 weeks of data from SpotifyCharts to train the model, with the predictors described above. With more time, I will be able to refine my model by removing low correlation variables and reducing collinearity. 
