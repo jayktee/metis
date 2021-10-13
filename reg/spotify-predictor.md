@@ -43,7 +43,9 @@ During my project, I ran into some target distribution issues with the first dat
 - Tested a target transformation 
 - Conducted feature engineering, including creating dummy variables for the `genre` variable
 - Improved my training dataset by achieving a better target distribution
-- Used `sklearn` to train and evaluate my model by splitting datasets
+- Used `sklearn` to train and evaluate my model using train-test-split
+
+Overall, after starting from an incredibly low base (R^2 of 0.07), my linear regression model achieved an R^2 of 0.698 and a MAE/RSME of 7.2/9.4 over 100 on test data. This is a significantly better outcome than other attempts at predicting popularity using the same data, which have not included `genre` dummies. 
 
 ## Tools
 - BeautifulSoup and Selenium for scraping spotifycharts.com
@@ -54,4 +56,4 @@ During my project, I ran into some target distribution issues with the first dat
 
 ## Communication
 
-Ultimately I was able to achieve an R^2 of 70% once I had conducted some feature engineering and added more training data. I developed slides to communicate my model development process and predictive outcomes, and have developed notebooks to explain the process.
+Ultimately I was able to achieve an R^2 of 0.698 and a MAE/RSME of 7.2/9.4 over 100 once I had conducted some feature engineering and added more training data. I developed slides to communicate my model development process and predictive outcomes, and have developed notebooks to explain the process.
