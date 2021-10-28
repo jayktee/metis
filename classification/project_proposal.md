@@ -6,7 +6,7 @@
 
 Spotify wants to build a predictor to identify the genre of a song, so that they can more easily develop playlists based on certain genres, e.g. "Emo Effect", "Classical Calling", or "Punk Paradise". With a large amount of data available on their track metadata, they have decided to try several different classification models and decide what is the best model to launch on their platform.
 
-Sony would like to first build a predictor for the United States market and, if the predictor has a high degree of accuracy,
+Spotify would like to first build a predictor for the United States market and, if the predictor has a high degree of accuracy,
 to build the same for other countries.
 
 * Who benefits from exploring this question or building this model/system?
@@ -21,7 +21,7 @@ I will be using a dataset downloaded from Kaggle with 228,000+ rows, originally 
 
 * What is an individual sample/unit of analysis in this project? What characteristics/features do you expect to work with?
 
-A row of analysis in this project is a song/track with several features to predict popularity (the
+A row of analysis in this project is a song/track with several features that can be used to identify the genre of the track (the
 target).
 
 Per the Spotify Tracks API documentation, API contains the following features for each track: 
