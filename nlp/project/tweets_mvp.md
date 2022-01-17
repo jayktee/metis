@@ -13,7 +13,7 @@ I then ran VADER on the corpus of tweets, resulting in a positive and negative s
 
 After grouping the sentiments by month and plotting them using Seaborn, I find that the negative sentiment regarding Covid vaccines grew significantly in June-July 2021, which is around the time that the FDA had given emergency authorization use for the general public. However, what is somewhat surprising is that positive sentiment has stayed somewhat constant over time.
 
-![Sentiment over time](/images/sentiment_time.png)
+![Sentiment over time](/nlp/project/images/sentiment_time.png
 
 ### Moving forward
 
