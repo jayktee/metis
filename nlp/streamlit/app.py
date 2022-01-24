@@ -67,4 +67,9 @@ vis_dtm = pyLDAvis.prepare(topic_term_dists=topic_term, doc_topic_dists=doc_topi
 py_lda_vis_html = pyLDAvis.prepared_data_to_html(vis_dtm)
 components.html(py_lda_vis_html, width=1300, height=800)
 
+doc_topic2, topic_term2, doc_lengths2, term_frequency2, vocab2 = model.dtm_vis(time=3, corpus=corpus)
+vis_dtm2 = pyLDAvis.prepare(topic_term_dists=topic_term2, doc_topic_dists=doc_topic2, doc_lengths=doc_lengths2, vocab=vocab2, term_frequency=term_frequency2)
+py_lda_vis_html2 = pyLDAvis.prepared_data_to_html(vis_dtm2)
+components.html(py_lda_vis_html2, width=1300, height=800)
+
 
