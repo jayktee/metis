@@ -11,8 +11,8 @@ import pyLDAvis.gensim_models
 import streamlit.components.v1 as components
 
 ## load previously saved corpus
-CORPUS_URL = ('/Users/joycetagal/Github/metis/nlp/data/corpus_moredata_tv.mm')
-MODEL_URL = ('/Users/joycetagal/Github/metis/nlp/data/models/ldamodel_moredata_tv')
+CORPUS_URL = ('https://github.com/jayktee/metis/blob/master/nlp/data/corpus_moredata_tv.mm')
+MODEL_URL = ('https://github.com/jayktee/metis/blob/master/nlp/data/models/ldamodel_moredata_tv')
 
 @st.cache
 def load_corpus(path):
