@@ -3,6 +3,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import gensim
 from gensim.corpora.mmcorpus import MmCorpus
 from gensim.test.utils import datapath
 from gensim.models import LdaSeqModel
