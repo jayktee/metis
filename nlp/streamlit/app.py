@@ -12,8 +12,8 @@ import pyLDAvis.gensim_models
 import streamlit.components.v1 as components
 
 ## load previously saved corpus
-CORPUS_URL = ('https://github.com/jayktee/metis/blob/master/nlp/data/corpus_moredata_tv.mm')
-MODEL_URL = ('https://github.com/jayktee/metis/blob/master/nlp/data/models/ldamodel_moredata_tv')
+CORPUS_URL = ('./data/corpus_moredata_tv.mm')
+MODEL_URL = ('./data/models/ldamodel_moredata_tv')
 
 @st.cache
 def load_corpus(path):
@@ -35,11 +35,6 @@ data_load_state.text("Corpus done! (using st.cache)")
 model_load_state = st.text('Loading model...')
 model = load_model(MODEL_URL)
 model_load_state.text("Model done! (using st.cache)")
-
-
-# load pretrained model from disk
-#temp_file = datapath('/Users/joycetagal/Github/metis/nlp/data/models/ldamodel_moredata_tv')
-#ldaseq = LdaSeqModel.load(temp_file)
 
 st.title('Uber pickups')
 
