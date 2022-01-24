@@ -17,15 +17,14 @@ MODEL_URL = ('./data/models/ldamodel_moredata_tv')
 
 @st.cache
 def load_corpus(path):
-    mm = MmCorpus(datapath(path))
+    mm = MmCorpus(path)
     for document in mm:
         pass
     return mm
 
 @st.cache
 def load_model(path):
-    temp = datapath(path)
-    model = LdaSeqModel.load(temp)
+    model = LdaSeqModel.load(path)
     return model
 
 data_load_state = st.text('Loading data...')
