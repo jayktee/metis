@@ -12,11 +12,11 @@ import pyLDAvis.gensim_models
 import streamlit.components.v1 as components
 
 ## load previously saved corpus
-#CORPUS_URL = ('/Users/joycetagal/Github/metis/nlp/streamlit/data/corpus_moredata_tv.mm')
-#MODEL_URL = ('/Users/joycetagal/Github/metis/nlp/streamlit/data/models/ldamodel_moredata_tv')
+CORPUS_URL = ('/Users/joycetagal/Downloads/untitled folder/data/corpus_moredata_tv.mm')
+MODEL_URL = ('/Users/joycetagal/Downloads/untitled folder/data/models/ldamodel_moredata_tv')
 
-CORPUS_URL = ('./nlp/streamlit/data/corpus_moredata_tv.mm')
-MODEL_URL = ('./nlp/streamlit/data/models/ldamodel_moredata_tv')
+#CORPUS_URL = ('./nlp/streamlit/data/corpus_moredata_tv.mm')
+#MODEL_URL = ('./nlp/streamlit/data/models/ldamodel_moredata_tv')
 
 @st.cache
 def load_corpus(path):
@@ -55,5 +55,3 @@ doc_topic2, topic_term2, doc_lengths2, term_frequency2, vocab2 = model.dtm_vis(t
 vis_dtm2 = pyLDAvis.prepare(topic_term_dists=topic_term2, doc_topic_dists=doc_topic2, doc_lengths=doc_lengths2, vocab=vocab2, term_frequency=term_frequency2)
 py_lda_vis_html2 = pyLDAvis.prepared_data_to_html(vis_dtm2)
 components.html(py_lda_vis_html2, width=1300, height=800)
-
-
