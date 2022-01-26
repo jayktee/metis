@@ -99,10 +99,12 @@ with c2:
 
 st.subheader("Topics over time")
 
-HtmlFile = open("./nlp/streamlit/images/topics_over_time.html", 'r', encoding='utf-8')
-source_code = HtmlFile.read() 
-print(source_code)
-components.html(source_code, height=800, width=1100)
+c1 = st.columns(1)
+with c1: 
+    HtmlFile = open("./nlp/streamlit/images/topics_over_time.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    print(source_code)
+    components.html(source_code, height=500, width=1000)
 
 st.write("Using the BERTopic topics_over_time function, we can view specific topics and their trends over time. Here, we see the top 10 Topics for the year and the top 4 words in the global topic representation. We can also click on specific topics in the legend to toggle the topic trend on and off the chart.")
 st.write("We can see here that the top topic (Topic 0) for Covid-19 vaccines involed mask-wearing and safe behavior. This topic peaked around July 2021, which was around the time that a majority of Americans were vaccinated.")
