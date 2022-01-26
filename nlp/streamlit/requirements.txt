@@ -7,4 +7,4 @@ regex~=2021.11.10
 seaborn~=0.11.2
 setuptools~=58.5.3
 umap-learn~=0.5.2
-bertopic==0.9.0
+bertopic~=0.9.0
