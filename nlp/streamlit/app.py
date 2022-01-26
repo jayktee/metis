@@ -98,12 +98,12 @@ with c2:
     components.html(source_code, height=500, width=1100)
 
 st.subheader("Topics over time")
-c3, c4 = st.columns((3, 1))
+c3, c4 = st.columns((5, 1))
 with c3: 
     HtmlFile = open("./nlp/streamlit/images/topics_over_time.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
-    components.html(source_code, height=800, width=1200)
+    components.html(source_code, height=800, width=1100)
 
 with c4:
     st.write("Using the BERTopic topics_over_time function, we can view specific topics and their trends over time. Here, we see the top 10 Topics for the year and the top 4 words in the global topic representation. We can also click on specific topics in the legend to toggle the topic trend on and off the chart.")
