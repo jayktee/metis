@@ -80,7 +80,7 @@ with cola:
     st.write("We can see that the larger circles, such as Topic 0, represent the largest (most mainstream) topics, such as mask-wearing and staying indoors. However, by hovering over some of the smaller circles, such as Topic 271 or Topic 86, we begin to see some anti-vaccine sentiments, with keywords such as 'infertility' and 'ivermectin'.")
 
 with colb:
-    HtmlFile = open("/Users/joycetagal/Downloads/untitled folder/images/intertopic_distance.html", 'r', encoding='utf-8')
+    HtmlFile = open("./nlp/streamlit/images/intertopic_distance.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code, height=700, width=900)
@@ -92,7 +92,7 @@ with c1:
     c1.write("The topic word scores chart here show the top 5 terms in the selected top 7 topics, with the bars representing the frequency of the term within the selected topic. ")
     
 with c2:
-    HtmlFile = open("/Users/joycetagal/Downloads/untitled folder/images/topic_word_scores.html", 'r', encoding='utf-8')
+    HtmlFile = open("./nlp/streamlit/images/topic_word_scores.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code, height=500, width=1100)
@@ -100,7 +100,7 @@ with c2:
 st.subheader("Topics over time")
 c3, c4 = st.columns((3, 1))
 with c3: 
-    HtmlFile = open("/Users/joycetagal/Downloads/untitled folder/images/topics_over_time.html", 'r', encoding='utf-8')
+    HtmlFile = open("./nlp/streamlit/images/topics_over_time.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
     components.html(source_code, height=800, width=1200)
