@@ -12,11 +12,11 @@ import pyLDAvis.gensim_models
 import streamlit.components.v1 as components
 
 ## load previously saved corpus
-CORPUS_URL = ('/Users/joycetagal/Downloads/untitled folder/data/corpus_moredata_tv.mm')
-MODEL_URL = ('/Users/joycetagal/Downloads/untitled folder/data/models/ldamodel_moredata_tv')
+##CORPUS_URL = ('/Users/joycetagal/Downloads/untitled folder/data/corpus_moredata_tv.mm')
+#MODEL_URL = ('/Users/joycetagal/Downloads/untitled folder/data/models/ldamodel_moredata_tv')
 
-#CORPUS_URL = ('./nlp/streamlit/data/corpus_moredata_tv.mm')
-#MODEL_URL = ('./nlp/streamlit/data/models/ldamodel_moredata_tv')
+CORPUS_URL = ('./nlp/streamlit/data/corpus_moredata_tv.mm')
+MODEL_URL = ('./nlp/streamlit/data/models/ldamodel_moredata_tv')
 
 @st.cache
 def load_corpus(path):
