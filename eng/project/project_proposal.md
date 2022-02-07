@@ -1,37 +1,59 @@
-#  Analyzing Covid-19 vaccine hesitancy: A Twitter analysis
+#  California Racial Identify Profiling Act (RIPA) Dashboard
 
 ### Question/Need:
 
-* What is the question behind your analysis? What is the purpose of the model/system you plan to build?
+In 2015, California's State Congress passed Assembly Bill (AB) 953 which enacted the Racial and Identify Profiling Act (RIPA). This act, among other things, requires peace officers to annually report stop data to the Attorney General's office at the Department of Justice (DOJ). The act also requires peace officers to record their perception of characteristics relevant to each stopped person(s), including gender, race and ethnicity, LGBT status, approximate age, disability and English fluency. 
 
-From December 11, 2020 -- the day that the Food and Drug Agency (FDA) issued the first Emergency Use Authorization for the Pfizer Covid-19 vaccine -- there was widespread excitement that the pandemic may soon be coming to an end. Yet, there was also growing opposition and concerns about the vaccine's safety and possible side effects.
+Data collection for RIPA has proceeded in waves, starting in 2018, beginning with the Law Enforcement Agencies (LEAs) with more than 1000 officers, and expanding to include all LEAs in the state by January 1, 2022. This year, all LEAs in the state will be required to submit their stop data to the DOJ. 
 
-In September 2020, a Pew survey showed that nearly half of American adults surveyed did not intend to take the vaccine, although by February 2021, only 30% of surveyed people said they would not get the vaccine while 19% had already received at least one dose. However, surveys can only go so far to identify public sentiment regarding the vaccine.
+Currently there are several dashboards visualizing the stop data for the first 2 waves of LEA submissions, including the official [DOJ dashboard](https://openjustice.doj.ca.gov/exploration/stop-data). This information is aggregated at the state level and not tailored to individual agencies, and therefore is difficult to use at the local or city level. 
 
-Using public Twitter data and natural language processing techniques, we can go further to identify the change in public sentiment towards the Covid vaccine, and study the reasons behind these changes. 
+In my experience working with police agencies and city officials, many cities desire to have simple, easy to understand web applications displaying visualizations and statistics for their citizens to understand. However, many smaller cities typically do not have the technical capability to build such an application.
 
+I will build a web application that allows users and agencies to break down relevant RIPA data to the agency level, and also provides visualizations and statistics of stops, their breakdown by race, ethnicity, and identity, and also provides coordinate locations for each stop. This dashboard will be automatically updated annually when the next wave of RIPA data is rolled out. My hope is that the web application can be embedded or linked by police agencies and city councils, in order to provide more information and transparency for their residents.
 
 ### Data Description:
 
 * What dataset(s) do you plan to use, and how will you obtain the data?
 
-Using the Twitter API and Tweepy, I will ingest and clean over 80,000 tweets related to the key words "vaccine" and "covid-19". To limit the scope of the search, I will search for tweets related to the Covid vaccines within a specific time period, i.e. 1000 tweets per day for 7 days for each month from January to December 2021.
+The dataset(s) I will use are 3 datasets in CSV format for the years 2018-2020, with about 3M stops per year, downloaded from the [Dept of Justice's Data Portal](https://openjustice.doj.ca.gov/data). 
 
 * What is an individual sample/unit of analysis in this project? What characteristics/features do you expect to work with?
 
-The unit of analysis is a single tweet, which includes the text of the tweet and any linked URLs, the author/user, links to any retweets or replies, interaction counts (e.g. number of retweets or replies), the timestamp, and the geolocation (if enabled) of the user. 
+The unit of analysis is a single stop. There are dozens of features and columns in the dataset. I will use the following:
+
+* Agency name
+* Time of stop
+* Date of stop
+* Duration of stop
+* Whether the stop occured in a school or involved a student
+* Perceived race or ethnicity of citizen
+* Perceived gender of citizen
+* Perceived LGBT status
+* Perceived age
+* English fluency
+* Perceived disability status
+* Reason for stop
+* Whether a search was conducted
+* If search was conducted, whether any contraband or evidence was discovered
+* Locality of the search (nearest city)
 
 ### Tools:
 
 * How do you intend to meet the tools requirement of the project?
 
-I will use topic modeling to identify the most popular or important topics and sentiment analysis libraries such as VADER to code the sentiment of each tweet.
+![Data pipeline](/eng/project/images/pipeline.png)
 
-Once the sentiment has been coded, I will use visualization libraries such as Seaborn to chart the percentage composition of positive to neutral to negative tweets regarding the Covid-19 vaccine over the year. 
+As per the sketch above, I will use the following tools to build my data pipeline. 
 
+* Download the annual RIPA CSVs from the DOJ data portal
+* Store data in relational database with SQLAlchemy
+* Clean data into useable format using Python, pandas, NumPy
+* Create a dashboard using Dash/Plotly and deploy to web using Heroku
+* I will build several robustness tests for future data downloads, and also build a scraper tool to periodically check for updates on the DOJ data portal
 
 ### MVP Goal:
 
 * What would a minimum viable product (MVP) look like for this project?
 
-For my MVP, I will begin with identifying sentiment analysis using VADER and do a simple visualization of the percentage of sentiment over the year. 
+For my MVP, I will begin by processing the smallest dataset for 2018, and build several visualizations using the dataset. If successful, it should be easy to then add on the 2 larger datasets (2019 and 2020).
