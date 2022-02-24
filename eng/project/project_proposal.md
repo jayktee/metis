@@ -2,7 +2,7 @@
 
 ### Question/Need:
 
-In 2015, California's State Congress passed Assembly Bill (AB) 953 which enacted the Racial and Identify Profiling Act (RIPA). This act, among other things, requires peace officers to annually report stop data to the Attorney General's office at the Department of Justice (DOJ). The act also requires peace officers to record their perception of characteristics relevant to each stopped person(s), including gender, race and ethnicity, LGBT status, approximate age, disability and English fluency. 
+In 2015, California's State Congress passed Assembly Bill (AB) 953 which enacted the Racial and Identify Profiling Act (RIPA). This act, among other things, requires peace officers to annually report stop data to the Attorney General's office at the California Department of Justice (DOJ). The act also requires peace officers to record their perception of characteristics relevant to each stopped person(s), including gender, race and ethnicity, LGBT status, approximate age, disability and English fluency. 
 
 Data collection for RIPA has proceeded in waves, starting in 2018, beginning with the Law Enforcement Agencies (LEAs) with more than 1000 officers, and expanding to include all LEAs in the state by January 1, 2022. This year, all LEAs in the state will be required to submit their stop data to the DOJ. 
 

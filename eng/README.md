@@ -12,7 +12,9 @@ Currently there are several dashboards visualizing the stop data for the first 2
 
 In my experience working with police agencies and city officials, many cities desire to have simple, easy to understand web applications displaying visualizations and statistics for their citizens to understand. However, many smaller cities typically do not have the technical capability to build such an application.
 
-I built a web application that allows users and agencies to break down relevant RIPA data to the agency level, and also provides visualizations and statistics of stops, their breakdown by race, ethnicity, and identity, and also provides coordinate locations for each stop. This dashboard will be automatically updated annually when the next wave of RIPA data is rolled out. My hope is that the web application can be embedded or linked by police agencies and city councils, in order to provide more information and transparency for their residents.
+I built a [web application](https://ripa-dash.herokuapp.com/) that allows users and agencies to break down relevant RIPA data to the agency level, and also provides visualizations and statistics of stops, their breakdown by race, ethnicity, and identity, and also provides coordinate locations for each stop. This dashboard will be automatically updated annually when the next wave of RIPA data is rolled out. 
+
+My hope is that the web application can be embedded or linked by police agencies and city councils, in order to provide more information and transparency for their residents.
 
 ### Data Description:
 
